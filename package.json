@@ -1,0 +1,33 @@
+{
+  "name": "office",
+  "version": "1.0.0",
+  "description": "office online",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^1.6.8"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.38",
+    "@types/node": "^7.0.22",
+    "install": "^0.10.1",
+    "npm": "^4.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron": "tsc && copy src\\* dist && electron dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maliming/office.git"
+  },
+  "keywords": [
+    "office",
+    "online"
+  ],
+  "author": "maliming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maliming/office/issues"
+  },
+  "homepage": "https://github.com/maliming/office#readme"
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <webview id="foo" src="https://onedrive.live.com/edit.aspx?cid=0411898fe0a597f6&id=documents&resid=411898FE0A597F6!1244&app=Word&&wdPid=3785b9a6" autosize="on"></webview>
+
+    <h1>Hello World!</h1>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+
+    <button id="test" onclick="message()">message</button>
+
+    <script>
+      function message(){
+        console.log("tt")
+        var t = new Date().toLocaleString();
+        var options={
+            dir: "ltr",
+            lang: "utf-8",
+            icon: "http://xuhong.github.io/images/gravatar.png",
+            body: "你好呀，欢迎留言交流呀"
+        };
+        var n = new Notification("HUSTecho: "+ t, options);    
+        n.onshow = function(){
+            console.log("You got me!");
+        };
+        n.onclick = function() {
+            alert("You clicked me!");
+            window.location = "/";
+        };
+        n.onclose = function(){
+            console.log("notification closed!");
+        };        
+        n.onerror = function() {
+            console.log("An error accured");
+        }    
+
+      }
+    
+    </script>
+  </body>
+</html>
